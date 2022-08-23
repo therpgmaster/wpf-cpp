@@ -2,6 +2,7 @@
 using System.IO;
 using System.IO.Pipes;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace wpf_gui
 {
@@ -11,22 +12,35 @@ namespace wpf_gui
         private NamedPipeServerStream srv;
         private StreamReader reader;
         private StreamWriter writer;
+        private List<char> buffer = new List<char>(); // incoming stream cache
         public ipc() /* ctor */
         {
             srv = new NamedPipeServerStream("my-very-cool-pipe-example", PipeDirection.InOut, 1, PipeTransmissionMode.Byte);
             reader = new StreamReader(srv);
             srv.WaitForConnection();
             writer = new StreamWriter(srv);
+
+            
         }
         ~ipc() { srv.Dispose(); } // dtor
-        public void send(string data) 
+        // use await for send/receive
+        public async Task send(string data) { await Task.Run(() => send_s(data)); }
+        public async Task<string> receive() { return await Task.Run(() => receive_s()); }
+        // these may block, always run as async tasks
+        private void send_s(string d)
         {
-            writer.Write(data);
-            writer.Write((char)0);
+            writer.Write(d);
+            writer.Write((char)0); 
             writer.Flush();
             srv.WaitForPipeDrain();
         }
-        public string receive() { return reader.ReadLine(); }
+        private string receive_s()
+        {
+            var d = reader.ReadLine();
+            if (!string.IsNullOrEmpty(d)) { return d; }
+            else { return ""; }
+        }
+
 
     }
 }

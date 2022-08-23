@@ -28,5 +28,10 @@ namespace wpf_gui
             InitializeComponent();
             ipc = new ipc();
         }
+
+        private async void TestBtn_ActionAsync(object sender, RoutedEventArgs e) 
+        {
+            await ipc.send("test button clicked");
+        }
     }
 }

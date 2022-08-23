@@ -2,10 +2,16 @@
 //
 
 #include <iostream>
+#include "ipc.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    ipc ipcObj{};
+    for (;;) 
+    {
+        std::string str = ipcObj.receive();
+        std::cout << "received: " << str << "\r\n";
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
