@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a0c5e56a-5f68-44ef-9f55-64f2eb9087ac": {
+      "ProjectGuid": "a0c5e56a-5f68-44ef-9f55-64f2eb9087ac",
+      "DisplayName": "wpf-gui",
+      "ColorIndex": 0
+    },
+    "168e82ae-f0d5-41f4-90fe-22ca1cc5655c": {
+      "ProjectGuid": "168e82ae-f0d5-41f4-90fe-22ca1cc5655c",
+      "DisplayName": "daemon",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
