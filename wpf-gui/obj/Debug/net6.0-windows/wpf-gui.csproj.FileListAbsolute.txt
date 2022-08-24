@@ -4,7 +4,6 @@ C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\bin\Debug\net6.0-windows\wpf-
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\bin\Debug\net6.0-windows\wpf-gui.dll
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\bin\Debug\net6.0-windows\ref\wpf-gui.dll
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\bin\Debug\net6.0-windows\wpf-gui.pdb
-C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\wpf-gui.csproj.AssemblyReference.cache
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\MainWindow.g.cs
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\App.g.cs
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\wpf-gui_MarkupCompile.cache
@@ -19,3 +18,4 @@ C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\wpf-
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\ref\wpf-gui.dll
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\wpf-gui.pdb
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\wpf-gui.genruntimeconfig.cache
+C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\wpf-gui.csproj.AssemblyReference.cache

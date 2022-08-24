@@ -9,38 +9,58 @@ namespace wpf_gui
     // TUTORIAL: https://dev.to/gabbersepp/ipc-between-c-and-c-by-using-named-pipes-4em9?signin=true
     class ipc
     {
-        private NamedPipeServerStream srv;
-        private StreamReader reader;
-        private StreamWriter writer;
-        private List<char> buffer = new List<char>(); // incoming stream cache
-        public ipc() /* ctor */
+        class StreamSrvState 
         {
-            srv = new NamedPipeServerStream("my-very-cool-pipe-example", PipeDirection.InOut, 1, PipeTransmissionMode.Byte);
-            reader = new StreamReader(srv);
-            srv.WaitForConnection();
-            writer = new StreamWriter(srv);
+            private NamedPipeServerStream s = null!;
+            private StreamReader r = null!;
+            private StreamWriter w = null!;
+            public StreamSrvState() { Task.Factory.StartNew(() => { init(); }); } // ctor, runs the init method in its own thread
+            ~StreamSrvState() { s.Dispose(); } // dtor
+            private volatile bool initDone = false;
+            private void init()
+            {
+                s = new NamedPipeServerStream("rpgpipe", PipeDirection.InOut, 1, PipeTransmissionMode.Byte);
+                r = new StreamReader(s);
+                s.WaitForConnection();
+                w = new StreamWriter(s);
+                initDone = true;
+            }
+            private void waitForInit() 
+            {
+                if (initDone) return;
+                System.Threading.Thread.Sleep(3000);
+                if (!initDone) { throw new InvalidOperationException("ipc init timed out"); }
+            }
 
-            
+            // these may block, run as async tasks
+            public void send(string d)
+            {
+                waitForInit(); // prevent data loss
+                w.Write(d);
+                w.Write((char)0);
+                w.Flush();
+                s.WaitForPipeDrain();
+            }
+            public string receive()
+            {
+                if (!initDone) { return ""; }
+                var d = r.ReadLine();
+                if (!string.IsNullOrEmpty(d)) { return d; }
+                else { return ""; }
+            }
         }
-        ~ipc() { srv.Dispose(); } // dtor
+
+        private StreamSrvState srv = new StreamSrvState();
+
         // use await for send/receive
-        public async Task send(string data) { await Task.Run(() => send_s(data)); }
-        public async Task<string> receive() { return await Task.Run(() => receive_s()); }
-        // these may block, always run as async tasks
-        private void send_s(string d)
+        public async Task send(string data) 
         {
-            writer.Write(d);
-            writer.Write((char)0); 
-            writer.Flush();
-            srv.WaitForPipeDrain();
+            await Task.Run(() => srv.send(data)); 
         }
-        private string receive_s()
+        public async Task<string> receive() 
         {
-            var d = reader.ReadLine();
-            if (!string.IsNullOrEmpty(d)) { return d; }
-            else { return ""; }
+            return await Task.Run(() => srv.receive()); 
         }
-
 
     }
 }

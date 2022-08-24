@@ -18,7 +18,7 @@ class ipc
 public:
     ipc() 
     {
-        fileHandle = CreateFileW(TEXT("\\\\.\\pipe\\my-very-cool-pipe-example"), GENERIC_READ | GENERIC_WRITE, FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, NULL);
+        fileHandle = CreateFileW(TEXT("\\\\.\\pipe\\rpgpipe"), GENERIC_READ | GENERIC_WRITE, FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, NULL);
     }
     std::string receive() /* may block */
     {

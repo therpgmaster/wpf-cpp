@@ -6,11 +6,11 @@
 
 int main()
 {
-    ipc ipcObj{};
-    for (;;) 
+    ipc ipc{};
+    for (;;)
     {
-        std::string str = ipcObj.receive();
-        std::cout << "received: " << str << "\r\n";
+        std::string str = ipc.receive();
+        if (!str.empty()) std::cout << "received: " << str << "\r\n";
     }
 }
 

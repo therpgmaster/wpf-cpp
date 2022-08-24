@@ -22,12 +22,8 @@ namespace wpf_gui
     /// </summary>
     public partial class MainWindow : Window
     {
-        ipc ipc;
-        public MainWindow()
-        {
-            InitializeComponent();
-            ipc = new ipc();
-        }
+        ipc ipc = new ipc();
+        public MainWindow() { InitializeComponent(); }
 
         private async void TestBtn_ActionAsync(object sender, RoutedEventArgs e) 
         {
