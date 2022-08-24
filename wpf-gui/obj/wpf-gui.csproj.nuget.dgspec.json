@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\therpgmaster\\source\\repos\\wpf-cpp\\wpf-gui\\wpf-gui.csproj": {}
+    "C:\\Users\\rpg\\repos\\wpf-cpp\\wpf-gui\\wpf-gui.csproj": {}
   },
   "projects": {
-    "C:\\Users\\therpgmaster\\source\\repos\\wpf-cpp\\wpf-gui\\wpf-gui.csproj": {
+    "C:\\Users\\rpg\\repos\\wpf-cpp\\wpf-gui\\wpf-gui.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\therpgmaster\\source\\repos\\wpf-cpp\\wpf-gui\\wpf-gui.csproj",
+        "projectUniqueName": "C:\\Users\\rpg\\repos\\wpf-cpp\\wpf-gui\\wpf-gui.csproj",
         "projectName": "wpf-gui",
-        "projectPath": "C:\\Users\\therpgmaster\\source\\repos\\wpf-cpp\\wpf-gui\\wpf-gui.csproj",
-        "packagesPath": "C:\\Users\\therpgmaster\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\therpgmaster\\source\\repos\\wpf-cpp\\wpf-gui\\obj\\",
+        "projectPath": "C:\\Users\\rpg\\repos\\wpf-cpp\\wpf-gui\\wpf-gui.csproj",
+        "packagesPath": "C:\\Users\\rpg\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rpg\\repos\\wpf-cpp\\wpf-gui\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\therpgmaster\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rpg\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -25,8 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/discord-net/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
@@ -61,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

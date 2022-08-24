@@ -20,12 +20,12 @@ public:
     {
         fileHandle = CreateFileW(TEXT("\\\\.\\pipe\\rpgpipe"), GENERIC_READ | GENERIC_WRITE, FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, NULL);
     }
-    std::string receive() /* may block */
+    bool receive(std::string& dataOut) /* may block */
     {
         char* buffer = new char[100];
         memset(buffer, 0, 100);
         readString(buffer);
-        std::string str(buffer);
+        std::string str = std:string(buffer);
         delete[] buffer;
         return str;
     }
