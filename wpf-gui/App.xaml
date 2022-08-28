@@ -3,7 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:wpf_gui"
              StartupUri="MainWindow.xaml">
+
+
     <Application.Resources>
-         
+        <SolidColorBrush x:Key="bg" Color="#FF141617" />
+        <SolidColorBrush x:Key="fg" Color="#FFFF" />
+        <SolidColorBrush x:Key="separator" Color="#FF26353C" />
+
+        <Style x:Key="stocks_style" TargetType="ListBoxItem" >
+            <Setter Property="FontSize" Value="10pt"></Setter>
+            <Setter Property="FontFamily" Value="Bahnschrift Light"></Setter>
+        </Style>
     </Application.Resources>
+    
 </Application>

@@ -142,6 +142,7 @@
     <ClCompile Include="daemon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="event_handler.h" />
     <ClInclude Include="ipc.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

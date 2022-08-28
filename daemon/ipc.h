@@ -1,12 +1,12 @@
 #pragma once
-
 #include <windows.h>
 #include <iostream>
-#include <string.h>
+#include <string>
+#include "event_handler.h"
 
 class ipc 
 {
-    HANDLE fileHandle;
+    HANDLE fileHandle = INVALID_HANDLE_VALUE;
     
     void readString(char* output) 
     {
@@ -16,18 +16,25 @@ class ipc
         while (read > 0 && *(output + index - 1) != 0);
     }
 public:
-    ipc() 
+    ipc() /* ctor, will block until ipc connection established */
     {
-        fileHandle = CreateFileW(TEXT("\\\\.\\pipe\\rpgpipe"), GENERIC_READ | GENERIC_WRITE, FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, NULL);
+        bool connected = false;
+        while (!connected)
+        {
+            fileHandle = CreateFileW(TEXT("\\\\.\\pipe\\rpgpipe"), GENERIC_READ | GENERIC_WRITE, FILE_SHARE_WRITE, NULL, OPEN_EXISTING, 0, NULL);
+            connected = (fileHandle != INVALID_HANDLE_VALUE);
+        }
     }
+
     bool receive(std::string& dataOut) /* may block */
     {
         char* buffer = new char[100];
         memset(buffer, 0, 100);
         readString(buffer);
-        std::string str = std:string(buffer);
+        std::string str(buffer);
         delete[] buffer;
-        return str;
+        dataOut = str;
+        return !str.empty();
     }
 
     // send data to server - TODO

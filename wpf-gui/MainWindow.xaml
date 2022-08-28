@@ -6,9 +6,13 @@
         xmlns:local="clr-namespace:wpf_gui"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Border Background="#FF0F1010">
-            <Button Content="Test Button" Click="TestBtn_ActionAsync" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="25"/>
-        </Border>
-    </Grid>
+
+    <Border Background="#FF0F1010">
+        <!-- <Button Content="Test Button" Click="TestBtn_ActionAsync" HorizontalAlignment="Center" VerticalAlignment="Center" Width="90" Height="25"/>-->
+        <Grid>
+            <!-- current active view -->
+            <ContentControl x:Name="ActiveView"/>
+        </Grid>
+    </Border>
+    
 </Window>

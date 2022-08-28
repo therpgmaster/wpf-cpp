@@ -18,7 +18,6 @@ C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\wpf-
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\ref\wpf-gui.dll
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\wpf-gui.pdb
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\wpf-gui.genruntimeconfig.cache
-C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\wpf-gui.csproj.AssemblyReference.cache
 C:\Users\rpg\repos\wpf-cpp\wpf-gui\bin\Debug\net6.0-windows\wpf-gui.exe
 C:\Users\rpg\repos\wpf-cpp\wpf-gui\bin\Debug\net6.0-windows\wpf-gui.deps.json
 C:\Users\rpg\repos\wpf-cpp\wpf-gui\bin\Debug\net6.0-windows\wpf-gui.runtimeconfig.json
@@ -40,3 +39,9 @@ C:\Users\rpg\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\refint\wpf-gui.dll
 C:\Users\rpg\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\wpf-gui.pdb
 C:\Users\rpg\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\wpf-gui.genruntimeconfig.cache
 C:\Users\rpg\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\ref\wpf-gui.dll
+C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\NewTransactionView.g.cs
+C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\PortfolioView.g.cs
+C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\NewTransactionView.baml
+C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\PortfolioView.baml
+C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\App.baml
+C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
