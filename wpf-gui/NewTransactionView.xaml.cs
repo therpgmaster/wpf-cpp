@@ -24,5 +24,12 @@ namespace wpf_gui
         {
             InitializeComponent();
         }
+
+        private void save_Action(object sender, RoutedEventArgs e) 
+        {
+            var s = new StockDisplayData() { ticker = tickerTextBox.Text, name = nameTextBox.Text };
+            mw.portfolioView.addTransaction(new StockDisplayData() { ticker = tickerTextBox.Text, name = nameTextBox.Text, shares = sharesTextBox.Text });
+            mw.switchToView(mw.portfolioView);
+        }
     }
 }

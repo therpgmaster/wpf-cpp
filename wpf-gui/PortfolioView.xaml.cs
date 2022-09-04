@@ -32,16 +32,22 @@ namespace wpf_gui
             stocks.Add(new StockDisplayData() { ticker = "XYZ", name = "X Group LTD." });
             portfolioListBox.ItemsSource = stocks;
         }
-        private void ToNewTransactionView_Action(object sender, RoutedEventArgs e) { mw.switchToView<NewTransactionView>(); }
-        
+        private void ToNewTransactionView_Action(object sender, RoutedEventArgs e) { mw.switchToViewTmp<NewTransactionView>(); }
+        // TODO: should process transactions to validate and format them correctly
+        // also a single stock could comprise several transactions
+        public void addTransaction(StockDisplayData t) 
+        {
+            stocks.Add(t);
+        }
     }
 
-    public class StockDisplayData 
+    public class StockDisplayData
     {
         public string ticker { get; set; } = "";
         public string name { get; set; } = "";
-        public string price { get; set; } = "0";
+        public string shares { get; set; } = "0";
         public string buyPrice { get; set; } = "0";
+        public string price { get; set; } = "0";
     }
 
 }

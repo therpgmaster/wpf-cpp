@@ -30,18 +30,26 @@ namespace wpf_gui
     public partial class MainWindow : Window
     {
         ipc ipc = new ipc();
+        public PortfolioView portfolioView = new PortfolioView();
         public MainWindow() 
         { 
             InitializeComponent(); 
-            switchToView<PortfolioView>(); // start in portfolio view
+            switchToView(portfolioView); // start in portfolio view
         }
 
-        public void switchToView<T>() where T : ViewBase, new() 
+        public void switchToViewTmp<T>() where T : ViewBase, new() /* create and switch to a temporary view */
         {
             var v = new T();
             ActiveView.Content = v;
             v.setMainWindowReference(this);
         }
+        public void switchToView(ViewBase v) /* switch to an existing view */
+        {
+            ActiveView.Content = v;
+            v.setMainWindowReference(this);
+        }
+
+        
 
         private async void TestBtn_ActionAsync(object sender, RoutedEventArgs e) 
         {

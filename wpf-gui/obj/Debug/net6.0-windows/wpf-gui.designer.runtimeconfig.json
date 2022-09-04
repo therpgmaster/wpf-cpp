@@ -12,9 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\therpgmaster\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\therpgmaster\\.nuget\\packages",
-      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      "C:\\Users\\rpg\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\rpg\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

@@ -45,3 +45,9 @@ C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\NewT
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\PortfolioView.baml
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\App.baml
 C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\rpg\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\NewTransactionView.g.cs
+C:\Users\rpg\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\PortfolioView.g.cs
+C:\Users\rpg\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\rpg\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\App.baml
+C:\Users\rpg\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\NewTransactionView.baml
+C:\Users\rpg\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\PortfolioView.baml

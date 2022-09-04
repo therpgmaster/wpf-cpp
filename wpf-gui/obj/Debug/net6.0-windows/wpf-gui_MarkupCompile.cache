@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\
+C:\Users\rpg\repos\wpf-cpp\wpf-gui\obj\Debug\net6.0-windows\
 wpf_gui
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\therpgmaster\source\repos\wpf-cpp\wpf-gui\App.xaml
+C:\Users\rpg\repos\wpf-cpp\wpf-gui\App.xaml
 3958793748
 
 61527399956
-1941142463650
+1941905061893
 MainWindow.xaml;NewTransactionView.xaml;PortfolioView.xaml;
 
 False
