@@ -1,8 +1,11 @@
 #include <iostream>
 #include "ipc.h"
+#include "debug.h"
 
 int main()
 {
+    debug();
+
     ipc ipc{};
     for (;;)
     {
